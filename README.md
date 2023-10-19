@@ -71,6 +71,8 @@ seen if this is a viable option in those environments.
 ## Other Resources:
 
 * Example repo on using [SurrealDB in embedded mode with Tauri IPC](https://github.com/reymom/surrealdb-starter-taurikit)
+* Tauri v2 shell plugin: [Current Version](https://github.com/tauri-apps/plugins-workspace/tree/v2/plugins/shell) -
+Version 2 seems to do things a little different. Once the release comes closer I'll try to update the example.
 
 ## Roadmap & TODO:
 
