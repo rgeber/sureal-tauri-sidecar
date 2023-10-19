@@ -7,6 +7,8 @@ This example repo shows how to use SurrealDB as a sidecar application with Tauri
 
 Tested on Linux with SurrealDB 1.0.0.
 
+By default SurrealDB will be exposed on `http://127.0.0.1:8877`.
+
 ## Get the binaries
 
 To keep this clean, small and safe no binaries are included in this repo. Follow these stops to obtain them and put them
@@ -60,9 +62,24 @@ native client drivers, and you won't need to worry about any kind of IPC channel
 
 It's a good consideration and also demonstrates the powerful option of bundling any binary you like with your Tauri app.
 
+Using side cars might work great on the Linux desktop but it may be a bad choice for windows or Mac OS due to firewall
+restrictions. In this case we open port `8877` on localhost which might trigger some pop-ups.
+
+Another consideration is the use of sidecar binaries on mobile platforms once Tauri supports them. It remains to be
+seen if this is a viable option in those environments.
+
 ## Other Resources:
 
 * Example repo on using [SurrealDB in embedded mode with Tauri IPC](https://github.com/reymom/surrealdb-starter-taurikit)
+
+## Roadmap & TODO:
+
+* A more visual demonstration on the front end (console.log only for now)
+* Using SurrealDB from both back end and front end.
+* CLI options for tauri
+* Add script to auto-add binaries
+* Test on Windows and Mac OS (volunteers with Macs needed :) )
+* Optional: Persistent password storage using OS keyring
 
 ## Known issues
 
