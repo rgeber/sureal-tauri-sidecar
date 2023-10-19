@@ -1,6 +1,6 @@
 # Use SurrealDB with Tauri (WIP)
 
-This example repo shows how to use surrealdb as a sidecar application with Tauri.
+This example repo shows how to use SurrealDB as a sidecar application with Tauri.
 
 > WARNING: This example will not work out of the box. The required binaries are not included. Follow the instructions
 > below to get the binaries.
@@ -18,7 +18,7 @@ First create the bin directory:
 mkdir <PROJECT_ROOT>/src-tauri/bin
 ```
 
-Download surrealdb from the [official release page](https://github.com/surrealdb/surrealdb/releases). For Linux on an
+Download SurrealDB from the [official release page](https://github.com/surrealdb/surrealdb/releases). For Linux on an
 amd64 architecture that would be `surreal-v1.0.0.linux-amd64.tgz`.
 
 Unpack to `<PROJECT_ROOT>/src-tauri/bin` and rename `surreal` to `surreal-x86_64-unknown-linux-gnu`.
@@ -56,7 +56,9 @@ cargo tauri dev
 
 SurrealDB can be used in an embedded mode witch works great with Tauri. It may be preferrable to use the database
 in server mode. That way both the back end and the frond end have client access to the database using their
-native client drivers and you won't need to worry about any kind of IPC channels.
+native client drivers, and you won't need to worry about any kind of IPC channels.
+
+It's a good consideration and also demonstrates the powerful option of bundling any binary you like with your Tauri app.
 
 ## Other Resources:
 
@@ -71,7 +73,7 @@ the database: `rm -rf /tmp/test.db`
 
 ### App crashes on reload due to `LOCK` file
 
-Surrealdb is configured to use persistent storage located in `/tmp/test.db`. When npm or cargo reload after a code
+SurrealDB is configured to use persistent storage located in `/tmp/test.db`. When npm or cargo reload after a code
 change it may be too quick and the lock file is still present.
 
 In a real world scenario I'd recommend to re-try a few times in that case. But for the sake of simplicity I didn't
